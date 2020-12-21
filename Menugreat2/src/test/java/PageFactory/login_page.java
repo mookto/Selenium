@@ -16,6 +16,8 @@ public class login_page {
 
 
 	By login_button = By.xpath("//div[@id='console-951510359']/div/div[2]/div/div/div/div/div/div/div/div[9]/div/div/div");
+	By userinfo = By.xpath("//div[@id='console-951510359']/div/div[2]/div/div/div/div/div[5]/div/span");
+	By logoutButton = By.xpath("//body/div[@id='console-951510359-overlays']/div[2]/div[1]/div[1]/span[3]");
 
 	WebDriver driver =null;
 
@@ -40,8 +42,9 @@ public class login_page {
 
 		driver.findElement(user_password) .sendKeys(password);
 	}
-	public void clickloginbutton () {
+	public void clickloginbutton () throws InterruptedException {
 		driver.findElement(login_button).click();
+		Thread.sleep(10000);
 	} 
 
 	public void launchbrowser () {
@@ -55,9 +58,25 @@ public class login_page {
 		Thread.sleep(10000);
 	}
 	public void CheckUserinfoButton() throws InterruptedException {
-		Thread.sleep(10000);
+		Thread.sleep(30000);
 		//driver.findElement(userinfoButton).click();
 		//if(driver.getCurrentUrl().equals("https://menugreat.com/console/#!Dashboard")) {
 			System.out.println(driver.getCurrentUrl() );
-		};
+		}
+	
+	public void clickCheckUserinfoButton() throws InterruptedException {
+		driver.findElement(userinfo).click();
+		Thread.sleep(20000);
+	}
+	
+	public void clickLogoutButton() throws InterruptedException {
+		driver.findElement(logoutButton).click();
+		Thread.sleep(20000);
+		
+	}
+	public void CheckHomepageUrl() throws InterruptedException {
+		Thread.sleep(10000);
+		
+			System.out.println(driver.getCurrentUrl() );
+		}
 }
