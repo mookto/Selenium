@@ -16,7 +16,7 @@ public class login_page {
 
 
 	By login_button = By.xpath("//div[@id='console-951510359']/div/div[2]/div/div/div/div/div/div/div/div[9]/div/div/div");
-	By userinfo = By.xpath("//div[@id='console-951510359']/div/div[2]/div/div/div/div/div[5]/div/span");
+	By userinfo = By.xpath("/html[1]/body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[6]/div[1]/span[1]");
 	By logoutButton = By.xpath("//body/div[@id='console-951510359-overlays']/div[2]/div[1]/div[1]/span[3]");
 
 	WebDriver driver =null;
