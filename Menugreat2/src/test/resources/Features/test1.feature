@@ -1,4 +1,4 @@
- Feature: Check menugreat console functionality
+Feature: Check menugreat console functionality
 
   Scenario Outline: User is logged in
     Given browser is open
@@ -9,10 +9,8 @@
     And user click userinfo button
     And user click logout button
     Then user navigate to homepage
-   
-   Examples:
-   |username|password|
-   |mehedi.hasan@orocube.net|2222|
-   |orocube@orotab.com|1111|
 
- 
+    Examples: 
+      | username                 | password |
+      | mehedi.hasan@orocube.net |     2222 |
+       
