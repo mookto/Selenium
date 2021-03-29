@@ -24,8 +24,6 @@ public class login_page {
 	public login_page( WebDriver driver) {
 		this.driver=driver;
 
-
-
 	}
 	
 	 
