@@ -41,15 +41,32 @@ public class Test {
 	 
 
 	@And("user clicks login button")
-	public void user_clicks_login_button() {
+	public void user_clicks_login_button() throws InterruptedException {
 	    login.clickloginbutton();
 	}
 
-	@Then("user navigate to dashboard")
+	@And("user navigate to dashboard")
 	public void user_navigate_to_dashboard( ) throws InterruptedException  {	
 		  
 		  login.CheckUserinfoButton();
 	}
+	
+	@And("user click userinfo button")
+	public void  user_click_userinfo_button( ) throws InterruptedException  {	
+		  
+		   login.clickCheckUserinfoButton();
+	}
+	@And("user click logout button")
+	public void user_click_logout_button( ) throws InterruptedException  {	
+		  
+		   login.clickLogoutButton();
+	}
+	@Then("user navigate to homepage")
+	public void user_navigate_to_homepage( ) throws InterruptedException  {	
+		  
+		   login.CheckHomepageUrl();
+	}
+	
 
 }
 	
